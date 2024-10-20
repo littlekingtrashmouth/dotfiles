@@ -18,6 +18,7 @@ return {
   opts = {
     defaults = {
       layout_config = {
+        prompt_position = "top",
         vertical = {
           width = 0.75
         }
@@ -27,6 +28,8 @@ return {
           reverse_directories = true
         }
       },
-    }
-  }
+      sorting_strategy = "ascending",
+    },
+    require("telescope").load_extension("noice")
+  },
 }

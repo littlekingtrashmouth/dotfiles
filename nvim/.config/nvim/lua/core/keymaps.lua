@@ -43,6 +43,10 @@ keymap.set("n", "<leader>qp", ":cprev<CR>")  -- jump to prev quickfix list item
 keymap.set("n", "<leader>ql", ":clast<CR>")  -- jump to last quickfix list item
 keymap.set("n", "<leader>qc", ":cclose<CR>") -- close quickfix list
 
+-- Dismiss noice message
+keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "dismiss NOice Message" })
+keymap.set("n", "<leader>nm", ":Telescope noice<CR>", { desc = "call noice" })
+
 -- Vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle maximize tab
 
@@ -57,7 +61,7 @@ keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 -- Telescope
 keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
 keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, {})
-keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, {})
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal <cr>", {})
 keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {})
 keymap.set('n', '<leader>fs', require('telescope.builtin').current_buffer_fuzzy_find, {})
 keymap.set('n', '<leader>fo', require('telescope.builtin').lsp_document_symbols, {})

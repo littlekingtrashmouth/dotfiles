@@ -37,7 +37,8 @@ return {
         end,
       },
       completion = {
-        completeopt = 'menu,menuone,noinsert',
+        -- completeopt = 'menu,menuone,noinsert',
+        autocomplete = false,
       },
       mapping = cmp.mapping.preset.insert {
         ['<C-j>'] = cmp.mapping.select_next_item(), -- next suggestion

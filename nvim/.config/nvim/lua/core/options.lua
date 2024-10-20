@@ -24,6 +24,7 @@ opt.wrap = false
 -- Search Settings
 opt.ignorecase = true
 opt.smartcase = true
+-- opt.hlsearch = false
 
 -- Cursor Line
 opt.cursorline = true
@@ -58,4 +59,4 @@ opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
 -- Scrolloff
---opt.scrolloff = 10000
+opt.scrolloff = 10000

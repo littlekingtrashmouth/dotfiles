@@ -15,12 +15,11 @@ return {
     indent = { enable = true },
     auto_install = true, -- automatically install syntax support when entering new file type buffer
     ensure_installed = {
-      'lua',
+      'lua', 'gdscript', 'godot_resource',
     },
   },
-  config = function (_, opts)
+  config = function(_, opts)
     local configs = require("nvim-treesitter.configs")
     configs.setup(opts)
   end
 }
-
