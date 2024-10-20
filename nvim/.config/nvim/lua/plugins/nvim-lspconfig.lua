@@ -65,6 +65,11 @@ return {
       },
     }
 
+    --godot lsp settings
+    require("lspconfig")["gdscript"].setup({
+      name = "godot",
+      cmd = vim.lsp.rpc.connect("127.0.0.1", "6005"),
+    })
     -- Globally configure all LSP floating preview popups (like hover, signature help, etc)
     local open_floating_preview = vim.lsp.util.open_floating_preview
     function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)

@@ -4,8 +4,8 @@ local opt = vim.opt
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Persistent Undo
+vim.opt.undodir = vim.fn.stdpath('config') .. '/.undo'
 opt.undofile = true
-opt.undodir = "~/.undodir"
 
 -- Line Numbers
 --opt.relativenumber = true

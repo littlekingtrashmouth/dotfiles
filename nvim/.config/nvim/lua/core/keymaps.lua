@@ -26,7 +26,7 @@ keymap.set("n", "<leader>tn", ":tabn<CR>")     -- next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>")     -- previous tab
 
 --Undo-Tree
-vim.keymap.set('n', '<leader>u', require('undotree').toggle, { noremap = true, silent = true })
+keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle) 
 
 -- Diff keymaps
 keymap.set("n", "<leader>cc", ":diffput<CR>")   -- put diff from current to other during diff
